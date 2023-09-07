@@ -6,7 +6,7 @@
 
 **Horário:**
  - 2ª feira, 12:30-14:00, [T] E.1.33
- - 5ª feira, 11:00-14:00, [T] E.1.08 / [P] LS4 (G.0.18)
+ - 5ª feira, 11:00-14:00, [T] E.1.08 / [P] LH1 (F.0.46)
 
 **Info**
  - [Informações gerais](https://github.com/isel-leic-tvs/info/blob/main/README.pt.md#t%C3%A9cnicas-de-virtualiza%C3%A7%C3%A3o-de-sistemas--system-virtualization-techniques)
