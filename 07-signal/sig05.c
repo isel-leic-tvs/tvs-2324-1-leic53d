@@ -70,9 +70,7 @@ int main() {
 	puts("");
 	puts("Hit CTRL-C to send SIGINT  [IGNORED]");
 	puts("  or");
-	printf("Run \"kill %d\" in another terminal to send SIGTERM  [IGNORED]\n", getpid());
-	puts("  or");
-	puts("Wait 20 seconds for SIGALRM  [IGNORED]");
+	printf("Run \"kill %d\" in another terminal to send SIGTERM  [START SHUTDOWN]\n", getpid());
 	puts("");
 
 	printf("Run \"kill -USR1 %d\" in another terminal to send SIGUSR1\n", getpid());

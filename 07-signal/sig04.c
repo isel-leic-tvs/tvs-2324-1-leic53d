@@ -53,6 +53,8 @@ int main() {
 	actionAlarm.sa_handler = sigAlrmHandler;
 	sigaction(SIGALRM, &actionAlarm, NULL);
 	
+	alarm(20);
+	
 	puts("");
 	puts("Hit CTRL-C to send SIGINT  [IGNORED]");
 	puts("  or");
