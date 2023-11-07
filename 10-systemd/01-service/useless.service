@@ -1,0 +1,8 @@
+[Unit]
+Description=Useless Service
+
+[Service]
+ExecStart=/home/isel/useless.sh
+Restart=always
+User=isel
+Group=isel
