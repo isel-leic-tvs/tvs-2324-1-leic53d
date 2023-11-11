@@ -13,7 +13,7 @@
    This example is UNSYNCHRONIZED. DO NOT USE AS A REFERENCE!
 */
 
-#define SHA_SIZE 4096
+#define SMA_SIZE 4096
 
 int main(int argc, const char * argv[]) {
 	if (argc != 2) {
@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
 	puts("OPEN");
 
 	void * psha = 
-		mmap(NULL, SHA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, shfd, 0);
+		mmap(NULL, SMA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, shfd, 0);
 	if (psha == NULL) {
 		perror("mmap failed");
 		exit(1);

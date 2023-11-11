@@ -12,7 +12,7 @@
    This example is UNSYNCHRONIZED. DO NOT USE AS A REFERENCE!
 */
 
-#define SHA_SIZE 4096
+#define SMA_SIZE 4096
 
 int main(int argc, const char * argv[]) {
 	if (argc != 2) {
@@ -25,14 +25,14 @@ int main(int argc, const char * argv[]) {
 	int shfd = shm_open(
 		shared_area_name,
 		O_RDWR|O_CREAT|O_EXCL,
-		0666
+		0644
 	);
 	if (shfd == -1) {
 		perror("shm_open failed");
 		exit(1);
 	}
 	
-	int tres = ftruncate(shfd, SHA_SIZE);
+	int tres = ftruncate(shfd, SMA_SIZE);
 	if (tres == -1) {
 		perror("ftruncate failed");
 		exit(1);
@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
 
 	puts("CREATED");
 	
-	void * psha = mmap(NULL, SHA_SIZE, PROT_READ, MAP_SHARED, shfd, 0);
+	void * psha = mmap(NULL, SMA_SIZE, PROT_READ, MAP_SHARED, shfd, 0);
 	if (psha == NULL) {
 		perror("mmap failed");
 		exit(1);

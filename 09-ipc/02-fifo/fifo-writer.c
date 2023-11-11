@@ -23,8 +23,9 @@ int main(int argc, const char * argv[]) {
 		char * s = fgets(line, 255, stdin);
 		if (s == NULL) break;
 		size_t l = strlen(line);
-		write(f, line, l-1);
+		write(f, line, l);
 	}
+	close(f);
 	
 	puts("========");
 	puts("DONE");
