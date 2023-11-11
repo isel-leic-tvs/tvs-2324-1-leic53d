@@ -1,8 +1,10 @@
 [Unit]
-Description=Useless Service
+Description=A useless service, for demo purposes.
 
 [Service]
-ExecStart=/home/isel/useless.sh
+ExecStart=/home/isel/tvs/tvs-2324-1/leic53d/10-systemd/01-service/useless.sh
+KillSignal=SIGINT
 Restart=always
 User=isel
 Group=isel
+
