@@ -1,0 +1,13 @@
+[Unit]
+Description=Echo Service
+Requires=echod.socket
+
+[Service]
+ExecStart=/home/isel/tvs/tvs-2324-1/leic53d/10-systemd/02-echod/echod
+Restart=always
+User=isel
+Group=isel
+
+[Install]
+Also=echod.socket
+
