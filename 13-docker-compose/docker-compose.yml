@@ -1,0 +1,32 @@
+
+name: "tvs"
+
+services:
+  ariana:
+    image: alpine
+    tty: true
+    depends_on:
+     - demoapp
+    networks:
+     - alphanet
+
+  ursula:
+    build: ubuntu-net
+    tty: true
+    depends_on:
+     - demoapp
+    networks:
+     - upsilonnet
+
+  demoapp:
+    build: app1
+    restart: "no"
+    ports:
+     - "6789:2345"
+    networks:
+     - alphanet
+     - upsilonnet
+
+networks:
+  alphanet:   {}
+  upsilonnet: {}
